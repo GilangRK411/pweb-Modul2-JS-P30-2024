@@ -32,7 +32,6 @@ html, body {
     }
 }
 
-
 .navbarsos {
     display: flex;
     button {
@@ -43,13 +42,11 @@ html, body {
     }
 }
 
-
 .nav-button-fb, .nav-button-ig {
     background-size: cover;
     height: 40px;
     width: 40px;
 }
-
 
 .shop-section {
     padding: 50px;
@@ -63,13 +60,11 @@ html, body {
     }
 }
 
-
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)); 
     gap: 20px;
 }
-
 
 .product {
     background-color: white;
@@ -93,7 +88,6 @@ html, body {
     height: auto;
     border-radius: 10px;
 }
-
 
 .product:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -119,21 +113,6 @@ html, body {
 .add-to-cart:active {
     background-color: rgb(192, 163, 0);
     transform: scale(0.95);
-}
-
-.remove-button {
-    background-color: red;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.remove-button:hover {
-    background-color: darkred;
-    transform: scale(1.05);/
 }
 
 #checkout-button {
@@ -193,8 +172,6 @@ html, body {
     display: none; 
 }
 
-
-/* Styling for Pagination (Prev, Next) */
 .pagination-controls {
     display: flex;
     justify-content: center;
@@ -219,11 +196,10 @@ html, body {
 }
 
 #prev-page:disabled, #next-page:disabled {
-    background-color: #ccc; /* Greyed out when disabled */
+    background-color: #ccc;
     cursor: not-allowed;
 }
 
-/* Styling for Choose Category */
 .filter-controls {
     display: flex;
     justify-content: center;
@@ -234,7 +210,7 @@ html, body {
 .filter-controls label {
     font-size: 16px;
     font-weight: bold;
-    margin-right: 10px; /* Add space between label and select */
+    margin-right: 10px; 
 }
 
 #category-select {
@@ -242,7 +218,7 @@ html, body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 20px; /* Space between selects */
+    margin-right: 20px; 
     cursor: pointer;
     transition: border-color 0.3s, box-shadow 0.3s;
 }

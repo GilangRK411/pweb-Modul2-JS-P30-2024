@@ -73,14 +73,15 @@ body {
   background-size: cover;
   position: relative;
   text-align: center;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5); /* Adds depth */
+  border-bottom: 2px solid black;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5); 
   p {
     font-size: 24px;
   }
   h1 {
     font-size: 60px;
     font-family: "Playfair Display", serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
   }
   button {
     padding: 15px 30px;
@@ -93,7 +94,7 @@ body {
   }
   button:hover {
     background-color: rgb(192, 163, 0);
-    transform: scale(1.05); /* Slightly enlarges button on hover */
+    transform: scale(1.05); 
   }
 }
 
@@ -104,7 +105,7 @@ body {
   h2 {
     font-family: "Playfair Display", serif;
     font-size: 40px;
-    margin-bottom: 20px; /* Added margin for spacing */
+    margin-bottom: 20px; 
   }
 }
 
@@ -124,7 +125,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+  transition: box-shadow 0.3s, transform 0.3s; 
   img {
     max-width: 100%;
     height: auto;
@@ -141,8 +142,8 @@ body {
 }
 
 .product:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds hover effect */
-  transform: translateY(-5px); /* Slightly lifts the item on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); 
 }
 
 /* Add to Cart Button */
@@ -174,7 +175,7 @@ body {
 
 .remove-button:hover {
   background-color: darkred;
-  transform: scale(1.05); /* Slightly enlarges button on hover */
+  transform: scale(1.05);
 }
 
 /* Checkout Button */
@@ -190,12 +191,11 @@ body {
 
 #checkout-button:hover {
   background-color: rgb(192, 163, 0);
-  transform: scale(1.05); /* Slightly enlarges button on hover */
+  transform: scale(1.05); 
 }
 
-/* Category Filter and Items per Page */
 .category-filter {
-  margin: 20px 0; /* Add margin for spacing */
+  margin: 20px 0; 
 }
 
 .category-filter select,
@@ -204,7 +204,7 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px; /* Space between selects */
+  margin-right: 10px; 
 }
 
 .category-filter label {
@@ -232,7 +232,7 @@ body {
 
 /* Empty Cart Message */
 #empty-cart {
-  display: none; /* Hidden by default, shown when cart is empty */
+  display: none; 
 }
 
 /* Footer */
@@ -261,16 +261,16 @@ footer a:hover {
 }
 
 .thumbnail {
-  width: 150px; /* Lebar thumbnail */
-  height: auto; /* Tinggi otomatis untuk menjaga proporsi */
-  border-radius: 5px; /* Menambahkan sedikit sudut membulat */
-  margin-bottom: 10px; /* Jarak di bawah gambar */
+  width: 150px; 
+  height: auto; 
+  border-radius: 5px; 
+  margin-bottom: 10px; 
 }
 
 .product h3 {
-  font-size: 16px; /* Ukuran font judul */
+  font-size: 16px; 
 }
 
 .product p {
-  font-size: 14px; /* Ukuran font harga */
+  font-size: 14px; 
 }

@@ -1,27 +1,25 @@
 // Initial Variables
 let products = [];
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let itemsPerPage = 6;
+let itemsPerPage = 4;
 let currentCategory = "";
 let currentPage = 1;
 let totalPages = 1;
 
-// Fetch products from DummyJSON API
 async function fetchProducts(category = "", page = 1) {
   try {
     let url = "https://dummyjson.com/products";
     if (category) {
       url += `/category/${category}`;
     } else {
-      // If no category is selected, fetch all products
-      url += "?limit=0"; // Set limit to 0 to fetch all products
+      url += "?limit=0";
     }
     const response = await fetch(url);
     const data = await response.json();
     products = data.products;
 
-    totalPages = Math.ceil(products.length / itemsPerPage); // Calculate total pages
-    displayProducts(page); // Display the first page of products
+    totalPages = Math.ceil(products.length / itemsPerPage);
+    displayProducts(page); 
   } catch (error) {
     console.error("Error fetching products:", error);
     document.getElementById("error-message").innerText =
@@ -33,7 +31,7 @@ async function fetchProducts(category = "", page = 1) {
 // Display Products in DOM
 function displayProducts(page = 1) {
   const productList = document.getElementById("product-grid");
-  productList.innerHTML = ""; // Clear previous content
+  productList.innerHTML = ""; 
 
   const start = (page - 1) * itemsPerPage;
   const end = itemsPerPage === 0 ? products.length : page * itemsPerPage;
@@ -61,23 +59,22 @@ function displayProducts(page = 1) {
 // Filter by category
 function filterByCategory() {
   currentCategory = document.getElementById("category-select").value;
-  currentPage = 1; // Reset to first page
+  currentPage = 1; 
   fetchProducts(currentCategory, currentPage);
 }
 
 // Change number of items per page
 function changeItemsPerPage() {
   itemsPerPage = parseInt(document.getElementById("item-count").value);
-  currentPage = 1; // Reset to first page
+  currentPage = 1;
   if (itemsPerPage === 0) {
-    totalPages = 1; // If showing all items, there's only one page
+    totalPages = 1;
   } else {
-    totalPages = Math.ceil(products.length / itemsPerPage); // Recalculate total pages
+    totalPages = Math.ceil(products.length / itemsPerPage); 
   }
   displayProducts(currentPage);
 }
 
-// Pagination logic
 function changePage(direction) {
   if (direction === "next" && currentPage < totalPages) {
     currentPage++;
@@ -117,8 +114,8 @@ function updateCart() {
     cartItemDiv.innerHTML = `
             <p>${item.title} - $ ${item.price} x ${item.quantity}</p>
             <button class="add-to-cart" onclick="addQuantity(${item.id})">+</button>
-            <button class="subtract-from-cart" onclick="subtractQuantity(${item.id})">-</button>
-            <button class="remove-from-cart" onclick="removeFromCart(${item.id})">Remove</button>
+            <button class="add-to-cart" onclick="subtractQuantity(${item.id})">-</button>
+            <button class="add-to-cart" onclick="removeFromCart(${item.id})">Remove</button>
         `;
     cartItemsDiv.appendChild(cartItemDiv);
   });
@@ -173,15 +170,13 @@ function checkout() {
   alert(
     `Thank you for your purchase! Your total is $${totalAmount.toFixed(2)}`
   );
-  cart = []; // Clear the cart after checkout
+  cart = []; 
   localStorage.removeItem("cart");
-  updateCart(); // Refresh cart
+  updateCart(); 
 }
 
-// Fetch products on initial load
 fetchProducts();
 
-// Load cart from local storage on page load
 window.onload = function () {
   updateCart();
 };
