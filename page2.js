@@ -77,8 +77,6 @@ function changeItemsPerPage() {
   displayProducts(currentPage);
 }
 
-// Rest of the code remains the same...
-
 // Pagination logic
 function changePage(direction) {
   if (direction === "next" && currentPage < totalPages) {
@@ -182,3 +180,8 @@ function checkout() {
 
 // Fetch products on initial load
 fetchProducts();
+
+// Load cart from local storage on page load
+window.onload = function () {
+  updateCart();
+};
