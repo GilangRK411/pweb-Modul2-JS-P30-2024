@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="page2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Product Selection</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbaruni">
+        <nav class="navbarmenu">
+          <div class="nav-item"><a href="page1.html">Home</a></div>
+          <div class="nav-item"><a href="#shop">Shop</a></div>
+          <div class="nav-item"><a href="#contact">Contact</a></div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Category and Items per Page Selection -->
+    <section id="shop-options">
+      <div class="filter-controls">
+        <label for="category-select">Choose Category:</label>
+        <select id="category-select" onchange="filterByCategory()">
+          <option value="">All</option>
+          <option value="smartphones">Smartphones</option>
+          <option value="laptops">Laptops</option>
+          <option value="fragrances">Fragrances</option>
+          <option value="skincare">Skincare</option>
+          <option value="groceries">Groceries</option>
+          <option value="home-decoration">Home Decoration</option>
+          <option value="furniture">Furniture</option>
+          <option value="lighting">Lighting</option>
+          <option value="womens-dresses">Women's Dresses</option>
+          <option value="womens-shoes">Women's Shoes</option>
+          <option value="mens-shirts">Men's Shirts</option>
+          <option value="mens-shoes">Men's Shoes</option>
+          <option value="mens-watches">Men's Watches</option>
+          <option value="womens-watches">Women's Watches</option>
+          <option value="womens-bags">Women's Bags</option>
+          <option value="womens-jewellery">Women's Jewellery</option>
+          <option value="sunglasses">Sunglasses</option>
+          <option value="automotive">Automotive</option>
+          <option value="motorcycle">Motorcycle</option>
+          <option value="lighting">Lighting</option>
+        </select>
+
+        <label for="item-count">Products per page:</label>
+        <input
+          type="number"
+          id="item-count"
+          value="6"
+          min="1"
+          max="20"
+          onchange="changeItemsPerPage()"
+        />
+      </div>
+
+      <div class="pagination-controls">
+        <button id="prev-page" onclick="changePage('prev')">Prev</button>
+        <button id="next-page" onclick="changePage('next')">Next</button>
+      </div>
+    </section>
+
+    <section id="shop" class="shop-section">
+      <div class="products-grid" id="product-grid"></div>
+    </section>
+
+    <section id="cart" class="cart-section">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+      </div>
+      <div id="cart-items">
+        <p id="empty-cart">Your cart is empty.</p>
+      </div>
+      <div id="cart-total" class="cart-total">
+        <p>Total Price: $<span id="total-price">0</span></p>
+        <button id="checkout-button" onclick="checkout()">Checkout</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Online Store. All Rights Reserved</p>
+    </footer>
+
+    <script src="page2.js"></script>
+  </body>
+</html>

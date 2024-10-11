@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Online Store</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="navbaruni">
+            <div class="icontoko">
+                <a href="index.html">
+                    <button class="logo"></button>
+                </a>
+            </div>
+            <nav class="navbarmenu">
+                <div class="nav-item"><a href="#home">Home</a></div>
+                <div class="nav-item"><a href="#shop">Shop</a></div>
+                <div class="nav-item"><a href="#contact">Contact</a></div>
+            </nav>
+            <div class="navbarsos">
+                <a href="https://www.facebook.com" target="_blank">
+                    <button class="nav-button-fb"></button>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <button class="nav-button-ig"></button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Welcome to Our Online Store</h1>
+                <p>Discover a variety of products at your fingertips. Shop now!</p>
+                <button onclick="window.location.href='page2.html'">View More Our Product</button>
+            </div>
+        </section>
+        
+
+        <!-- Product Section -->
+        <section id="shop" class="shop-section">
+            <div class="shop-header">
+                <h2>Top Collection</h2>
+                </div>
+            </div>
+            <div class="products-grid" id="product-grid">
+                <!-- Product items will be populated here using JavaScript -->
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="cart-section">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+            </div>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+                <p id="empty-cart">Your cart is empty.</p>
+            </div>
+            <div id="cart-total" class="cart-total">
+                <p>Total Price: $ <span id="total-price">0</span></p>
+                <button id="checkout-button">Checkout</button>
+            </div>
+        </section>
+
+        <!-- Error Section -->
+        <div id="error-message" style="color: red; display: none;"></div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <p>Follow us on:</p>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 Online Store. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="page1.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
